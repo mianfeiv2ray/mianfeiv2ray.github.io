@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://mianfeiv2ray.github.io/news/article-61288.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Vue3项目中动态组件component的使用</title>
+        <meta name="description" content="&lt;template&gt;   &lt;div class="goods-tabs"&gt;     &lt;nav&gt;       &lt;a :class="{ active: curr" />
+        <link rel="icon" href="/assets/website/img/v2raylinux/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费V2Ray 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mianfeiv2ray.github.io/news/article-61288.htm" />
+    <meta property="og:site_name" content="免费V2Ray 订阅机场节点官网" />
+    <meta property="og:title" content="Vue3项目中动态组件component的使用" />
+    <meta property="og:image" content="https://mianfeiv2ray.github.io/uploads/20241109-1/14993e4cb1281da20b885c5c9fbd9835.webp" />
+        <meta property="og:release_date" content="2025-02-22T19:12:18" />
+    <meta property="og:updated_time" content="2025-02-22T19:12:18" />
+        <meta property="og:description" content="&lt;template&gt;   &lt;div class="goods-tabs"&gt;     &lt;nav&gt;       &lt;a :class="{ active: curr" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vue3项目中动态组件component的使用">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="">
+    <link href="/assets/website/css/v2raylinux/css2-Robotoitalwght010003000400050007000900110013001400150017001900_OpenSansitalwght030004000500060007000800130014001500160017001800_Poppinsitalwght010002000300040005000600070008000900110012001300140015001600170018001900_swap.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/css/v2raylinux/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/aos.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/all.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="/assets/website/css/v2raylinux/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT7S29254M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT7S29254M');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="about-page" data-page="detail">
+        <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center">
+                                <span class="sitename">免费V2Ray</span>
+                            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Page Title -->
+        <div class="page-title dark-background" style="background-image: url(/assets/website/img/v2raylinux/page-title-bg.jpg);">
+            <div class="container position-relative">
+                <h1>Vue3项目中动态组件component的使用</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="新闻资讯">新闻资讯</a></li>
+                        <li class="current">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Alt Services Section -->
+        <section id="alt-services" class="alt-services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <pre><code class="language-javascript">&lt;template&gt;   &lt;div class="goods-tabs"&gt;     &lt;nav&gt;       &lt;a :class="{ active: currentName === 'GoodsDetail' }" href="javascript:;" @click="toggle('GoodsDetail')"         &gt;商品详情&lt;/a       &gt;       &lt;a href="javascript:;" :class="{ active: currentName === 'GoodsComment' }" @click="toggle('GoodsComment')"         &gt;商品评价&lt;span&gt;(500+)&lt;/span&gt;&lt;/a       &gt;     &lt;/nav&gt;     &lt;!-- 切换内容的地方 --&gt;     &lt;!-- 基于动态组件显现渲染 --&gt;     &lt;!-- &lt;GoodsDetail&gt;&lt;/GoodsDetail&gt;     &lt;GoodsComment&gt;&lt;/GoodsComment&gt; --&gt;     &lt;!-- is的值是哪个组件的名称就显示哪个组件 --&gt;     &lt;component :is="currentName"&gt;&lt;/component&gt;   &lt;/div&gt; &lt;/template&gt; &lt;script&gt; import GoodsDetail from './goods-details.vue' import GoodsComment from './goods-comment.vue' import { ref } from 'vue' export default {   name: 'GoodsTabs',   components: { GoodsComment, GoodsDetail },   setup() {     const currentName = ref('GoodsDetail')     const toggle = type =&gt; {       currentName.value = type     }     return { currentName, toggle }   } } &lt;/script&gt; &lt;style lang="less" scoped&gt; .goods-tabs {   min-height: 600px;   background: #fff;   nav {     height: 70px;     line-height: 70px;     display: flex;     border-bottom: 1px solid #f5f5f5;     a {       padding: 0 40px;       font-size: 18px;       position: relative;       &gt; span {         color: @priceColor;         font-size: 16px;         margin-left: 10px;       }       &amp;:first-child {         border-right: 1px solid #f5f5f5;       }       &amp;.active {         &amp;::before {           content: '';           position: absolute;           left: 40px;           bottom: -1px;           width: 72px;           height: 2px;           background: @xtxColor;         }       }     }   } } &lt;/style&gt;</code></pre> <p>效果:点击哪个组件,currentName= 组件的名称就显示哪个组件</p> <p><img fetchpriority="high" decoding="async" alt="" height="201" src="http://img.555519.xyz/uploads3/20220604/daa43e681182e5c761fad8cbbb957908.jpg"></p> <p><img decoding="async" alt="" height="203" src="http://img.555519.xyz/uploads3/20220604/51d40fd2cd79b13cbd5a619b9ea50700.jpg"></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>下一个：<a href="/news/article-61289.htm">动物疫苗去哪里买便宜点 动物疫苗去哪里买便宜点呢</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-61288.htm" title="Vue3项目中动态组件component的使用">Vue3项目中动态组件component的使用</a></li>
+                        <li class="py-2"><a href="/news/article-61289.htm" title="动物疫苗去哪里买便宜点 动物疫苗去哪里买便宜点呢">动物疫苗去哪里买便宜点 动物疫苗去哪里买便宜点呢</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-22-clash-v2ray-ss-ssr.htm" title="免费V2Ray | 2月22日18M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享">免费V2Ray | 2月22日18M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Alt Services Section -->
+    </main>
+        <footer id="footer" class="footer dark-background">
+        <div class="container copyright text-center mt-4">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">免费V2Ray 订阅机场节点官网</a> 版权所有 Powered by WordPress
+            </p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information:  -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/v2raylinux/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/jquery-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/purecounter_vanilla.js"></script>
+    <!-- Main JS File -->
+    <script src="/assets/website/js/frontend/v2raylinux/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
