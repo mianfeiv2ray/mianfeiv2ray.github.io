@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://mianfeiv2ray.github.io/news/article-84989.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>python实现模拟身份验证服务器综合系统设计</title>
+        <meta name="description" content="完成一个 Python 程序，实现密码存储和验证，用于模拟身份验证服务器，以便破解数据库的对手无法获得用户的明文密码。实现基本的注册和登录功能。 测试样例如下：  input R timerring " />
+        <link rel="icon" href="/assets/website/img/v2raylinux/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费V2Ray 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mianfeiv2ray.github.io/news/article-84989.htm" />
+    <meta property="og:site_name" content="免费V2Ray 订阅机场节点官网" />
+    <meta property="og:title" content="python实现模拟身份验证服务器综合系统设计" />
+    <meta property="og:image" content="https://mianfeiv2ray.github.io/uploads/20241109-1/bac086bc0276c7966891d43d5af7e47b.webp" />
+        <meta property="og:release_date" content="2025-03-30T09:36:58" />
+    <meta property="og:updated_time" content="2025-03-30T09:36:58" />
+        <meta property="og:description" content="完成一个 Python 程序，实现密码存储和验证，用于模拟身份验证服务器，以便破解数据库的对手无法获得用户的明文密码。实现基本的注册和登录功能。 测试样例如下：  input R timerring " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="python实现模拟身份验证服务器综合系统设计">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="">
+    <link href="/assets/website/css/v2raylinux/css2-Robotoitalwght010003000400050007000900110013001400150017001900_OpenSansitalwght030004000500060007000800130014001500160017001800_Poppinsitalwght010002000300040005000600070008000900110012001300140015001600170018001900_swap.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/css/v2raylinux/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/aos.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/all.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="/assets/website/css/v2raylinux/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT7S29254M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT7S29254M');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="about-page" data-page="detail">
+        <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center">
+                                <span class="sitename">免费V2Ray</span>
+                            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Page Title -->
+        <div class="page-title dark-background" style="background-image: url(/assets/website/img/v2raylinux/page-title-bg.jpg);">
+            <div class="container position-relative">
+                <h1>python实现模拟身份验证服务器综合系统设计</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="新闻资讯">新闻资讯</a></li>
+                        <li class="current">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Alt Services Section -->
+        <section id="alt-services" class="alt-services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <p>完成一个 Python 程序，实现密码存储和验证，用于模拟身份验证服务器，以便破解数据库的对手无法获得用户的明文密码。实现基本的注册和登录功能。</p> <p>测试样例如下：</p> <h4> <a id="input_4" rel="nofollow"></a>input</h4> <pre><code class="prism language-txt">R timerring i love cryptography L timerring i love cryptography L timerring i love cipher L Who i love cryptography Q </code></pre> <p>该系统的源码如下：</p> <h4> <a id="source_code_23" rel="nofollow"></a>source code</h4> <pre><code class="prism language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> annotations <span class="token keyword">from</span> typing <span class="token keyword">import</span> Dict <span class="token keyword">import</span> getpass <span class="token keyword">import</span> hashlib <span class="token keyword">import</span> os  database<span class="token punctuation">:</span> Dict<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">,</span> UserPassword<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token keyword">class</span> <span class="token class-name">UserPassword</span><span class="token punctuation">:</span>     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> in_username<span class="token punctuation">,</span> in_password_hash<span class="token punctuation">,</span> in_salt<span class="token punctuation">)</span><span class="token punctuation">:</span>         self<span class="token punctuation">.</span>username<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> in_username         self<span class="token punctuation">.</span>password_hash<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> in_password_hash         self<span class="token punctuation">.</span>salt<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> in_salt         self<span class="token punctuation">.</span>method<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">'scrypt'</span>      <span class="token comment"># define verify_password function</span>     <span class="token keyword">def</span> <span class="token function">verify_password</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> password<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">bool</span><span class="token punctuation">:</span>         password_ver<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> password<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>         <span class="token comment"># use the same salt</span>         salt_ver<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>salt         <span class="token comment"># set corresponding parameters</span>         n<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">4</span>         r<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">8</span>         p<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">16</span>         password_hash_ver<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>scrypt<span class="token punctuation">(</span>password_ver<span class="token punctuation">,</span> salt<span class="token operator">=</span>salt_ver<span class="token punctuation">,</span> n<span class="token operator">=</span>n<span class="token punctuation">,</span> r<span class="token operator">=</span>r<span class="token punctuation">,</span> p<span class="token operator">=</span>p<span class="token punctuation">)</span>         <span class="token comment"># verify the hash value of the password</span>         <span class="token keyword">if</span> password_hash_ver <span class="token operator">==</span> self<span class="token punctuation">.</span>password_hash<span class="token punctuation">:</span>             <span class="token keyword">return</span> <span class="token boolean">True</span>         <span class="token keyword">else</span><span class="token punctuation">:</span>             <span class="token keyword">return</span> <span class="token boolean">False</span>   <span class="token keyword">def</span> <span class="token function">database_add_item</span><span class="token punctuation">(</span>user<span class="token punctuation">:</span> UserPassword<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token boolean">None</span><span class="token punctuation">:</span>     <span class="token keyword">if</span> user<span class="token punctuation">.</span>username <span class="token keyword">in</span> database<span class="token punctuation">:</span>         <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">'User {} already exists.'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">)</span>     database<span class="token punctuation">[</span>user<span class="token punctuation">.</span>username<span class="token punctuation">]</span> <span class="token operator">=</span> user   <span class="token keyword">def</span> <span class="token function">login_user</span><span class="token punctuation">(</span>username<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> password_plaintext<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">bool</span><span class="token punctuation">:</span>     <span class="token keyword">if</span> username <span class="token keyword">not</span> <span class="token keyword">in</span> database<span class="token punctuation">:</span>         <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">'User {} does not exist.'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token keyword">return</span> database<span class="token punctuation">[</span>username<span class="token punctuation">]</span><span class="token punctuation">.</span>verify_password<span class="token punctuation">(</span>password_plaintext<span class="token punctuation">)</span>   <span class="token keyword">def</span> <span class="token function">register_user</span><span class="token punctuation">(</span>username<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> password_plaintext<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token boolean">None</span><span class="token punctuation">:</span>     password_bytes<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> password_plaintext<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>     <span class="token comment"># The os.urandom function is used to obtain random bytes of a specified length</span>     <span class="token comment"># generate the salt bytes</span>     salt_bytes<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> os<span class="token punctuation">.</span>urandom<span class="token punctuation">(</span><span class="token number">64</span><span class="token punctuation">)</span>     <span class="token comment"># set corresponding parameters</span>     n<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">4</span>     r<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">8</span>     p<span class="token punctuation">:</span> <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">16</span>     <span class="token comment"># Hash encryption</span>     password_hash<span class="token punctuation">:</span> <span class="token builtin">bytes</span> <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>scrypt<span class="token punctuation">(</span>password_bytes<span class="token punctuation">,</span> salt<span class="token operator">=</span>salt_bytes<span class="token punctuation">,</span> n<span class="token operator">=</span>n<span class="token punctuation">,</span> r<span class="token operator">=</span>r<span class="token punctuation">,</span> p<span class="token operator">=</span>p<span class="token punctuation">)</span>     <span class="token comment"># construct instance object</span>     User<span class="token punctuation">:</span> UserPassword <span class="token operator">=</span> UserPassword<span class="token punctuation">(</span>username<span class="token punctuation">,</span> password_hash<span class="token punctuation">,</span> salt_bytes<span class="token punctuation">)</span>     <span class="token comment"># Add to database</span>     database_add_item<span class="token punctuation">(</span>User<span class="token punctuation">)</span>   <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>     <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>         <span class="token keyword">try</span><span class="token punctuation">:</span>             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Usage:'</span><span class="token punctuation">)</span>             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\tR - register a new user'</span><span class="token punctuation">)</span>             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\tL - login with an existing user'</span><span class="token punctuation">)</span>             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'\tQ - exit'</span><span class="token punctuation">)</span>             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>             command<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Input command:'</span><span class="token punctuation">)</span>             <span class="token keyword">if</span> command <span class="token operator">==</span> <span class="token string">'Q'</span><span class="token punctuation">:</span>                 exit<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>             <span class="token keyword">elif</span> command <span class="token operator">==</span> <span class="token string">'R'</span> <span class="token keyword">or</span> command <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">:</span>                 username<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Input username:'</span><span class="token punctuation">)</span>                 <span class="token comment"># password: str = getpass.getpass('Input password:') # will not work properly for PyCharm, IDLE, etc.</span>                 password<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Input password:'</span><span class="token punctuation">)</span>                 <span class="token keyword">if</span> command <span class="token operator">==</span> <span class="token string">'R'</span><span class="token punctuation">:</span>                     register_user<span class="token punctuation">(</span>username<span class="token punctuation">,</span> password<span class="token punctuation">)</span>                     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'User created successfully.'</span><span class="token punctuation">)</span>                 <span class="token keyword">elif</span> command <span class="token operator">==</span> <span class="token string">'L'</span><span class="token punctuation">:</span>                     login_valid<span class="token punctuation">:</span> <span class="token builtin">bool</span> <span class="token operator">=</span> login_user<span class="token punctuation">(</span>username<span class="token punctuation">,</span> password<span class="token punctuation">)</span>                     <span class="token keyword">if</span> login_valid<span class="token punctuation">:</span>                         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'User logged in successfully.'</span><span class="token punctuation">)</span>                     <span class="token keyword">else</span><span class="token punctuation">:</span>                         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Password verification failed. Can not logged in.'</span><span class="token punctuation">)</span>                 <span class="token keyword">else</span><span class="token punctuation">:</span>                     <span class="token keyword">assert</span> <span class="token boolean">False</span>             <span class="token keyword">else</span><span class="token punctuation">:</span>                 <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">'Invalid command.'</span><span class="token punctuation">)</span>         <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>             <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Error: {}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>  </code></pre> <h4> <a id="output_121" rel="nofollow"></a>output</h4> <pre><code class="prism language-txt">Usage: 	R - register a new user 	L - login with an existing user 	Q - exit  Input command:R Input username:timerring Input password:i love cryptography User created successfully. Usage: 	R - register a new user 	L - login with an existing user 	Q - exit  Input command:L Input username:timerring Input password:i love cryptography User logged in successfully. Usage: 	R - register a new user 	L - login with an existing user 	Q - exit  Input command:L Input username:timerring Input password:i love cipher Password verification failed. Can not logged in. Usage: 	R - register a new user 	L - login with an existing user 	Q - exit  Input command:L Input username:Who Input password:i love cryptography Error: User Who does not exist. Usage: 	R - register a new user 	L - login with an existing user 	Q - exit  Input command:Q  进程已结束，退出代码为 0  </code></pre> <p>由输出可知，系统功能一切正常。</p> <p>受于文本篇幅原因，本文相关算法实现工程例如环境及相关库，无法展示出来，现已将资源上传，可自行点击下方链接下载。</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://download.csdn.net/download/m0_52316372/85982183"  rel="nofollow">python实现模拟身份验证服务器综合系统工程文件</a></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-84271.htm">动物疫苗注射方法及部位图片 动物疫苗注射方法及部位图片大全</a></p>
+                                        <p>下一个：<a href="/news/article-84990.htm">动物疫苗种类和特点图片（动物疫苗的了解）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-free-v2ray-subscribe.htm" title="免费V2Ray | 3月25日21.2M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享">免费V2Ray | 3月25日21.2M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-69301.htm" title="正则表达式规则以及贪婪匹配与非贪婪匹配">正则表达式规则以及贪婪匹配与非贪婪匹配</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-28-free-node-subscribe-links.htm" title="免费V2Ray | 2月28日19.2M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享">免费V2Ray | 2月28日19.2M/S|免费V2ray/Clash/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-node-share-links.htm" title="免费V2Ray | 3月14日18.2M/S|免费SSR/V2ray/Clash/Shadowrocket免费节点订阅分享">免费V2Ray | 3月14日18.2M/S|免费SSR/V2ray/Clash/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-node-share.htm" title="免费V2Ray | 3月6日22.7M/S|免费V2ray/Shadowrocket/SSR/Clash免费节点订阅分享">免费V2Ray | 3月6日22.7M/S|免费V2ray/Shadowrocket/SSR/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-26-free-v2ray-subscribe.htm" title="免费V2Ray | 2月26日21M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享">免费V2Ray | 2月26日21M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-1-node-share.htm" title="免费V2Ray | 3月1日18.8M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享">免费V2Ray | 3月1日18.8M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-clash-v2ray-ss-ssr.htm" title="免费V2Ray | 3月30日20.7M/S|免费SSR/Shadowrocket/Clash/V2ray免费节点订阅分享">免费V2Ray | 3月30日20.7M/S|免费SSR/Shadowrocket/Clash/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-27-node-share.htm" title="免费V2Ray | 2月27日22.6M/S|免费Clash/V2ray/SSR/Shadowrocket免费节点订阅分享">免费V2Ray | 2月27日22.6M/S|免费Clash/V2ray/SSR/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-82128.htm" title="动物防疫站***免费吗今天（动物防疫***收费吗）">动物防疫站***免费吗今天（动物防疫***收费吗）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Alt Services Section -->
+    </main>
+        <footer id="footer" class="footer dark-background">
+        <div class="container copyright text-center mt-4">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">免费V2Ray 订阅机场节点官网</a> 版权所有 Powered by WordPress
+            </p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information:  -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/v2raylinux/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/jquery-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/purecounter_vanilla.js"></script>
+    <!-- Main JS File -->
+    <script src="/assets/website/js/frontend/v2raylinux/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
