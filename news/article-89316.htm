@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://mianfeiv2ray.github.io/news/article-89316.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Java中的base64编码器_java_</title>
+        <meta name="description" content="简介 什么是Base64编码呢？在回答这个问题之前，我们需要了解一下计算机中文件的分类，对于计算机来说文件可以分为两类，一类是文本文件，一类是二进制文件。 对于二进制文件来说，其内容是用二进制来表示的" />
+        <link rel="icon" href="/assets/website/img/v2raylinux/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费V2Ray 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mianfeiv2ray.github.io/news/article-89316.htm" />
+    <meta property="og:site_name" content="免费V2Ray 订阅机场节点官网" />
+    <meta property="og:title" content="Java中的base64编码器_java_" />
+    <meta property="og:image" content="https://mianfeiv2ray.github.io/uploads/20241109-1/373257619ae2b068e4e252cfbd5103e0.webp" />
+        <meta property="og:release_date" content="2025-04-05T08:21:35" />
+    <meta property="og:updated_time" content="2025-04-05T08:21:35" />
+        <meta property="og:description" content="简介 什么是Base64编码呢？在回答这个问题之前，我们需要了解一下计算机中文件的分类，对于计算机来说文件可以分为两类，一类是文本文件，一类是二进制文件。 对于二进制文件来说，其内容是用二进制来表示的" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Java中的base64编码器_java_">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="">
+    <link href="/assets/website/css/v2raylinux/css2-Robotoitalwght010003000400050007000900110013001400150017001900_OpenSansitalwght030004000500060007000800130014001500160017001800_Poppinsitalwght010002000300040005000600070008000900110012001300140015001600170018001900_swap.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/css/v2raylinux/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/aos.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/all.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="/assets/website/css/v2raylinux/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT7S29254M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT7S29254M');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="about-page" data-page="detail">
+        <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center">
+                                <span class="sitename">免费V2Ray</span>
+                            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Page Title -->
+        <div class="page-title dark-background" style="background-image: url(/assets/website/img/v2raylinux/page-title-bg.jpg);">
+            <div class="container position-relative">
+                <h1>Java中的base64编码器_java_</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="新闻资讯">新闻资讯</a></li>
+                        <li class="current">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Alt Services Section -->
+        <section id="alt-services" class="alt-services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<h2>简介</h2> <p>什么是Base64编码呢？在回答这个问题之前，我们需要了解一下计算机中文件的分类，对于计算机来说文件可以分为两类，一类是文本文件，一类是二进制文件。</p> <p>对于二进制文件来说，其内容是用二进制来表示的，对于人类是不可立马理解的。如果你尝试用文本编辑器打开二进制文件，可能会看到乱码。这是因为二进制文件的编码方式和文本文件的编码方式是不一样的，所以当文本编辑器尝试将二进制文件翻译成为文本内容的时候，就会出现乱码。</p> <p>对于文本文件来说，也有很多种编码方式，比如最早的ASCII编码和目前常用的UTF-8和UTF-16等编码方式。即使是文本文件，如果你使用不同的编码方式打开，也可能会看到乱码。</p> <p>所以不管是文本文件还是二进制文件也好，都需要进行编码格式的统一。也就是说写入的编码是什么样子的，那么数据读取的编码也应该和其匹配。</p> <p>Base64编码实际上就是将二进制数据编码成为可视化ASCII字符的一种编码方式。</p> <p>为什么会有这样的要求呢？</p> <p>我们知道计算机世界的发展不是一蹴而就的，它是一个慢慢成长的过程，对于字符编码来说，最早只支持ASCII编码，后面才扩展到Unicode等。所以对于很多应用来说除了ASCII编码之外的其他编码格式是不支持的，那么如何在这些系统中展示非ASCII code呢？</p> <p>解决的方式就是进行编码映射，将非ASCII的字符映射成为ASCII的字符。而base64就是这样的一种编码方式。</p> <p>常见的使用Base64的地方就是在web网页中，有时候我们需要在网页中展示图片，那么可以将图片进行base64编码，然后填充到html中。</p> <p>还有一种应用就是将文件进行base64编码，然后作为邮件的附件进行发送。</p> <h2>JAVA对base64的支持</h2> <p>既然base64编码这么好用，接下来我们来看一下JAVA中的base64实现。</p> <p>java中有一个对应的base64实现，叫做java.util.Base64。这个类是Base64的工具类，是JDK在1.8版本引入的。</p> <p>Base64中提供了三个getEncoder和getDecoder方法，通过获取对应的Encoder和Decoder，然后就可以调用Encoder的encode和decode方法对数据进行编码和解码，非常的方便。</p> <p>我们先来看一下Base64的基本使用例子：</p> <div class="ay1code"> <pre class="brush:java;"> // 使用encoder进行编码   String encodedString = Base64.getEncoder().encodeToString("what is your name baby?".getBytes("utf-8"));   System.out.println("Base64编码过后的字符串 :" + encodedString);     // 使用encoder进行解码   byte[] decodedBytes = Base64.getDecoder().decode(encodedString);     System.out.println("解码过后的字符串: " + new String(decodedBytes, "utf-8"));</pre> </div> <p>作为一个工具类，JDK中提供的Base64工具类还是很好用的。</p> <p>这里就不详细讲解它的使用，本篇文章主要分析JDK中Base64是怎么实现的。</p> <h2>JDK中Base64的分类和实现</h2> <p>JDK中Base64类有提供了三个encoder方法，分别是getEncoder,getUrlEncoder和getMimeEncoder:</p> <div class="ay1code"> <pre class="brush:java;">    public static Encoder getEncoder() {           return Encoder.RFC4648;      }        public static Encoder getUrlEncoder() {           return Encoder.RFC4648_URLSAFE;      }        public static Encoder getMimeEncoder() {          return Encoder.RFC2045;      }</pre> </div> <p>同样的，它也提供了三个对应的decoder，分别是getDecoder，getUrlDecoder，getMimeDecoder：</p> <div class="ay1code"> <pre class="brush:java;">    public static Decoder getDecoder() {           return Decoder.RFC4648;      }        public static Decoder getUrlDecoder() {           return Decoder.RFC4648_URLSAFE;      }        public static Decoder getMimeDecoder() {           return Decoder.RFC2045;      }</pre> </div> <p>从代码中可以看出，这三种编码分别对应的是RFC4648，RFC4648_URLSAFE和RFC2045。</p> <p>这三种都属于base64编码的变体，我们看下他们有什么区别：</p> <table> <tbody> <tr> <th>编码名称</th> <th>编码字符</th> <th>编码字符</th> <th>编码字符</th> </tr> <tr> <td> </td> <td>第62位</td> <td>第63位</td> <td>补全符</td> </tr> <tr> <td>RFC 2045: Base64 transfer encoding for MIME</td> <td><code>+</code></td> <td><code>/</code></td> <td> <code>=</code> mandatory</td> </tr> <tr> <td>RFC 4648: base64 (standard)</td> <td><code>+</code></td> <td><code>/</code></td> <td> <code>=</code> optional</td> </tr> <tr> <td>RFC 4648: base64url (URL- and filename-safe standard)</td> <td><code>-</code></td> <td><code>_</code></td> <td> <code>=</code> optional</td> </tr> </tbody> </table> <p>可以看到base64和Base64url的区别是第62位和第63位的编码字符不一样，而base64 for MIME跟base64的区别是补全符是否是强制的。</p> <p>另外，对于Basic和base64url来说，不会添加line separator字符，而base64 for MIME在一行超出76字符之后，会添加'\r' 和 '\n'作为line separator。</p> <p>最后，如果在解码的过程中，发现有不存于Base64映射表中的字符的处理方式也不一样，base64和Base64url会直接拒绝，而base64 for MIME则会忽略。</p> <p>base64和Base64url的区别可以通过下面两个方法来看出：</p> <div class="ay1code"> <pre class="brush:java;">        private static final char[] toBase64 = {              'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',              'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',              'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',              'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',              '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'          };</pre> </div> <div class="ay1code"> <pre class="brush:java;">        private static final char[] toBase64URL = {              'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',              'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',              'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',              'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',              '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '_'          };</pre> </div> <p>而对MIME来说，定义了一个一行的最大字符个数,和换行符：</p> <div class="ay1code"> <pre class="brush:java;">        private static final int MIMELINEMAX = 76;          private static final byte[] CRLF = new byte[] {'\r', '\n'};</pre> </div> <h2>Base64的高级用法</h2> <p>一般情况下我们用Base64进行编码的对象长度是固定的，我们只需要将输入对象转换成为byte数组即可调用encode或者decode的方法。</p> <p>但是在某些情况下我们需要对流数据进行转换，这时候就可以用到Base64中提供的两个对Stream进行wrap的方法：</p> <div class="ay1code"> <pre class="brush:java;">        public OutputStream wrap(OutputStream os) {              Objects.requireNonNull(os);              return new EncOutputStream(os, isURL ? toBase64URL : toBase64,                                         newline, linemax, doPadding);          }</pre> </div> <div class="ay1code"> <pre class="brush:java;">        public InputStream wrap(InputStream is) {              Objects.requireNonNull(is);              return new DecInputStream(is, isURL ? fromBase64URL : fromBase64, isMIME);          }</pre> </div> <p>这两个方法分别对应于encoder和decoder。</p> <h2>总结</h2> <p>以上就是JDK中对Base64的实现和使用，虽然base64的变种有很多种，但是JDK中的Base64只实现了其中用处最为广泛的3种。大家在使用的时候一定要区分具体是那种Base64的实现方式，以免出现问题。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-89315.htm">如何在Python中中断for循环？</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-2-node-share.htm" title="免费V2Ray | 4月2日20.4M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享">免费V2Ray | 4月2日20.4M/S|免费V2ray/Shadowrocket/Clash/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-free-high-speed-nodes.htm" title="免费V2Ray | 3月20日20.6M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享">免费V2Ray | 3月20日20.6M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-86429.htm" title="宠物粮食哪里批发便宜些呢（宠物粮批发市场在哪）">宠物粮食哪里批发便宜些呢（宠物粮批发市场在哪）</a></li>
+                        <li class="py-2"><a href="/news/article-80047.htm" title="宠物食品代加工能赚钱吗（宠物代加工食品厂）">宠物食品代加工能赚钱吗（宠物代加工食品厂）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-subscribe-node.htm" title="免费V2Ray | 3月31日21.7M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享">免费V2Ray | 3月31日21.7M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-71259.htm" title="开动物医院需要多少资金呢 开动物医院需要多少资金呢知乎">开动物医院需要多少资金呢 开动物医院需要多少资金呢知乎</a></li>
+                        <li class="py-2"><a href="/news/article-69302.htm" title="畜牧局发放的疫苗都什么牌子的（畜牧疫苗管理制度）">畜牧局发放的疫苗都什么牌子的（畜牧疫苗管理制度）</a></li>
+                        <li class="py-2"><a href="/news/article-70610.htm" title="小动物打针视频（动物打针图片大全）">小动物打针视频（动物打针图片大全）</a></li>
+                        <li class="py-2"><a href="/news/article-74579.htm" title="vue3使用vuex实现页面实时更新数据（setup）">vue3使用vuex实现页面实时更新数据（setup）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-24-free-high-speed-nodes.htm" title="免费V2Ray | 3月24日23M/S|免费Clash/V2ray/SSR/Shadowrocket免费节点订阅分享">免费V2Ray | 3月24日23M/S|免费Clash/V2ray/SSR/Shadowrocket免费节点订阅分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Alt Services Section -->
+    </main>
+        <footer id="footer" class="footer dark-background">
+        <div class="container copyright text-center mt-4">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">免费V2Ray 订阅机场节点官网</a> 版权所有 Powered by WordPress
+            </p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information:  -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/v2raylinux/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/jquery-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/purecounter_vanilla.js"></script>
+    <!-- Main JS File -->
+    <script src="/assets/website/js/frontend/v2raylinux/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
