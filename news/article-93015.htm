@@ -104,6 +104,7 @@
                   				  				  				<div id="content_views" class="htmledit_views"> <p>echarts要实现自适应大小，需要在页面发生大小改变的时候，对图表实例进行重绘。</p> <p>在echarts里边，提供了一个重绘的方法：<span style="color:#f33b45;"><strong>resize()</strong></span>图表的实例对象调用该方法即可进行重绘。</p> <p>然后还需要在vue的钩子函数mounted里边，定义一个<span style="color:#f33b45;"><strong>window.resize()</strong></span>方法来监听页面发生变化。当页面发生变化时，就执行重绘的方法。</p> <p>完整示例如下：</p> <pre class="has"><code class="language-html">&lt;template&gt;     &lt;div class="echarts"&gt;         &lt;div id="echart"&gt;&lt;/div&gt;     &lt;/div&gt; &lt;/template&gt;  &lt;script&gt; import Echarts from 'echarts' export default {     data() {         return{             myChart: {}         }     },     created() {         this.$nextTick(()=&gt; {             this.loadEchart()         })     },     mounted(){         let _this = this;         window.onresize = function() {             _this.myChart.resize()         }     },     methods: {         loadEchart() {             this.myChart = Echarts.init(document.getElementById("echart"));             this.myChart.setOption({                 title: {                     text: 'ECharts 示例'                 },                 tooltip: {},                 xAxis: {                     data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']                 },                 yAxis: {},                 series: [{                     name: '销量',                     type: 'bar',                     data: [5, 20, 36, 10, 10, 20]                 }]             })         }     } } &lt;/script&gt;  &lt;style&gt; #echart {     width: 50%;     height: 300px; } &lt;/style&gt;</code></pre> <p>效果图：</p> <p><img fetchpriority="high" decoding="async" alt="" class="has" height="422" src="http://img.555519.xyz/uploads3/20220607/d0c72f56330910d98ea6dce16536e73c.jpg"></p> <p>该示例的数据来自echarts官方，可以根据自己的实际需求来修改数据。原理都是一样的，希望能帮到有需要的人。如果有写的不对的地方也欢迎指出。</p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-93014.htm">layui form.render(&#8216;select&#8217;, &#8216;test2&#8217;) 更新渲染</a></p>
+                                        <p>下一个：<a href="/news/article-93758.htm">瑞鹏宠物医院在线咨询（瑞鹏宠物医院在线咨询免费）</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -113,16 +114,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-3-8-free-node-subscribe-links.htm" title="免费V2Ray | 3月8日19.3M/S|免费SSR/Clash/V2ray/Shadowrocket免费节点订阅分享">免费V2Ray | 3月8日19.3M/S|免费SSR/Clash/V2ray/Shadowrocket免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/news/article-66115.htm" title="C语言操作符详解">C语言操作符详解</a></li>
-                        <li class="py-2"><a href="/news/article-77985.htm" title="兽用疫苗保质期多久（兽用疫苗常温下能放多久）">兽用疫苗保质期多久（兽用疫苗常温下能放多久）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-15-free-node-subscribe-links.htm" title="免费V2Ray | 3月15日22.4M/S|免费SSR/Shadowrocket/Clash/V2ray免费节点订阅分享">免费V2Ray | 3月15日22.4M/S|免费SSR/Shadowrocket/Clash/V2ray免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-subscribe-node.htm" title="免费V2Ray | 3月31日21.7M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享">免费V2Ray | 3月31日21.7M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/news/article-70609.htm" title="python协程 &amp; asyncio &amp; 异步编程（一） 协程">python协程 &amp; asyncio &amp; 异步编程（一） 协程</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-20-free-high-speed-nodes.htm" title="免费V2Ray | 3月20日20.6M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享">免费V2Ray | 3月20日20.6M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/news/article-81439.htm" title="宠物领养协议书范本（宠物领养协议书怎么写）">宠物领养协议书范本（宠物领养协议书怎么写）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-22-free-high-speed-nodes.htm" title="免费V2Ray | 3月22日19.4M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享">免费V2Ray | 3月22日19.4M/S|免费Clash/SSR/V2ray/Shadowrocket免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/news/article-88589.htm" title="开动物医院详细步骤是什么（怎么开动物医院）">开动物医院详细步骤是什么（怎么开动物医院）</a></li>
+                        <li class="py-2"><a href="/news/article-83552.htm" title="兽用疫苗储藏冷藏温度多少合适（兽用疫苗储存温度要求）">兽用疫苗储藏冷藏温度多少合适（兽用疫苗储存温度要求）</a></li>
+                        <li class="py-2"><a href="/news/article-82839.htm" title="开动物医院需要具备哪些条件呢视频（开动物诊疗所需要哪些条件）">开动物医院需要具备哪些条件呢视频（开动物诊疗所需要哪些条件）</a></li>
+                        <li class="py-2"><a href="/news/article-71259.htm" title="开动物医院需要多少资金呢 开动物医院需要多少资金呢知乎">开动物医院需要多少资金呢 开动物医院需要多少资金呢知乎</a></li>
+                        <li class="py-2"><a href="/news/article-92283.htm" title="宠物粮食加工厂哪里多些（宠物粮加工需要多少钱）">宠物粮食加工厂哪里多些（宠物粮加工需要多少钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-free-node-subscribe.htm" title="免费V2Ray | 3月23日20.2M/S|免费Clash/V2ray/SSR/Shadowrocket免费节点订阅分享">免费V2Ray | 3月23日20.2M/S|免费Clash/V2ray/SSR/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-71930.htm" title="北京领养小狗（北京领养小狗公司）">北京领养小狗（北京领养小狗公司）</a></li>
+                        <li class="py-2"><a href="/news/article-89315.htm" title="如何在Python中中断for循环？">如何在Python中中断for循环？</a></li>
+                        <li class="py-2"><a href="/news/article-67384.htm" title="实时流处理与分布式存储过程中对文件的操作">实时流处理与分布式存储过程中对文件的操作</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-19-free-node-subscribe-links.htm" title="免费V2Ray | 3月19日18.2M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享">免费V2Ray | 3月19日18.2M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-free-v2ray.htm" title="免费V2Ray | 3月2日18M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享">免费V2Ray | 3月2日18M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享</a></li>
                     </ul>
     </div>
 </div>
@@ -134,7 +135,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
