@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://mianfeiv2ray.github.io/news/article-99703.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Jackson忽略字段不序列化字段的3种方法</title>
+        <meta name="description" content="1、为字段添加@JsonIgnore注解，可以忽略该字段的序列化和反序列化。 @JsonIgnore private String author; 2、使用JsonIgnoreProperties注解" />
+        <link rel="icon" href="/assets/website/img/v2raylinux/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费V2Ray 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mianfeiv2ray.github.io/news/article-99703.htm" />
+    <meta property="og:site_name" content="免费V2Ray 订阅机场节点官网" />
+    <meta property="og:title" content="Jackson忽略字段不序列化字段的3种方法" />
+    <meta property="og:image" content="https://mianfeiv2ray.github.io/uploads/20241109-1/9db8ec563cb40dbaed9faca16455aba4.webp" />
+        <meta property="og:release_date" content="2025-04-19T08:59:19" />
+    <meta property="og:updated_time" content="2025-04-19T08:59:19" />
+        <meta property="og:description" content="1、为字段添加@JsonIgnore注解，可以忽略该字段的序列化和反序列化。 @JsonIgnore private String author; 2、使用JsonIgnoreProperties注解" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Jackson忽略字段不序列化字段的3种方法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="">
+    <link href="/assets/website/css/v2raylinux/css2-Robotoitalwght010003000400050007000900110013001400150017001900_OpenSansitalwght030004000500060007000800130014001500160017001800_Poppinsitalwght010002000300040005000600070008000900110012001300140015001600170018001900_swap.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/css/v2raylinux/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/aos.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/all.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="/assets/website/css/v2raylinux/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT7S29254M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT7S29254M');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="about-page" data-page="detail">
+        <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center">
+                                <span class="sitename">免费V2Ray</span>
+                            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Page Title -->
+        <div class="page-title dark-background" style="background-image: url(/assets/website/img/v2raylinux/page-title-bg.jpg);">
+            <div class="container position-relative">
+                <h1>Jackson忽略字段不序列化字段的3种方法</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="新闻资讯">新闻资讯</a></li>
+                        <li class="current">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Alt Services Section -->
+        <section id="alt-services" class="alt-services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>1、为字段添加@JsonIgnore注解，可以忽略该字段的序列化和反序列化。</p> <pre><code class="language-java">@JsonIgnore private String author;</code></pre> <p>2、使用JsonIgnoreProperties注解忽略多个字段</p> <pre><code class="language-java">@JsonIgnoreProperties({ "summary", "author" }) public class ArticleIgnoreProperties {  	private String title; 	private String summary; 	private String content; 	private String author;  }</code></pre> <p>JsonIgnore作用于单个字段，JsonIgnoreProperties作用于类的多个字段，两者都是用来忽略指定的字段。</p> <p>除此之外，还有另外一个以JsonIgnore开头的注解JsonIgnoreType，用于忽略指定类型（类、接口）的字段。</p> <h2>JsonIgnoreType注解</h2> <h3><a name="t3" rel="nofollow"></a><a id="JsonIgnoreType_123" rel="nofollow"></a>使用JsonIgnoreType注解忽略指定类型的字段</h3> <p>在指定的类型上，添加@JsonIgnoreType注解，可以忽略该类型的字段进行序列化。</p> <pre><code class="language-java">public class AnimalIgnoreType {  	private String name; 	private Date date; 	private Address address;  	@JsonIgnoreType 	public static class Address { 		private String city; 	} }</code></pre> <h3>使用JsonIgnoreType注解动态忽略指定类型的字段</h3> <p>前面使用JsonIgnoreType注解，忽略的类型是固定的。</p> <p>利用ObjectMapper的addMixIn方法，可以动态的将JsonIgnoreType注解应用于其他数据类型。</p> <pre><code class="language-java">public class AnimalIgnoreType {  	private String name; 	private Date date; 	private Address address;  	public static class Address { 		private String city; 		 	}  }</code></pre> <p>首先，定义一个空的类，并添加JsonIgnoreType注解。</p> <pre><code class="language-java">@JsonIgnoreType public class IgnoreType {}</code></pre> <p>在序列化时，调用ObjectMapper的addMixIn方法，将JsonIgnoreType注解应用于目标类。</p> <p>下面的例子，会将IgnoreType类的注解，添加到Date和Address上，因此序列化时这两个类对应的字段会被忽略。</p> <pre><code class="language-java">/**  * 调用ObjectMapper的addMixIn方法，将@JsonIgnoreType注解应用于任意目标类.  *   * @throws JsonProcessingException  */ @Test public void mixIn() throws JsonProcessingException { 	AnimalIgnoreType animal = new AnimalIgnoreType(); 	animal.setName("sam"); 	animal.setDate(new Date()); 	 	AnimalIgnoreType.Address address = new AnimalIgnoreType.Address(); 	address.setCity("gz"); 	animal.setAddress(address); 	 	ObjectMapper mapper = new ObjectMapper(); 	mapper.addMixIn(Date.class, IgnoreType.class); 	mapper.addMixIn(Address.class, IgnoreType.class); 	System.out.println(mapper.writeValueAsString(animal)); }</code></pre> <p>结果：{"name":"sam"}</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://996geek.com/articles/164"  rel="nofollow">《轻松学习Jackson》教程</a></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-99702.htm">python函数参数的默认参数、元组参数和字典参数例解</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-85710.htm" title="Intellij IDEA下载安装配置GIT详细教程 [超详细]">Intellij IDEA下载安装配置GIT详细教程 [超详细]</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-4-node-share-links.htm" title="免费V2Ray | 4月4日19.3M/S|免费Shadowrocket/SSR/V2ray/Clash免费节点订阅分享">免费V2Ray | 4月4日19.3M/S|免费Shadowrocket/SSR/V2ray/Clash免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-node-share-links.htm" title="免费V2Ray | 3月14日18.2M/S|免费SSR/V2ray/Clash/Shadowrocket免费节点订阅分享">免费V2Ray | 3月14日18.2M/S|免费SSR/V2ray/Clash/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-80047.htm" title="宠物食品代加工能赚钱吗（宠物代加工食品厂）">宠物食品代加工能赚钱吗（宠物代加工食品厂）</a></li>
+                        <li class="py-2"><a href="/news/article-99702.htm" title="python函数参数的默认参数、元组参数和字典参数例解">python函数参数的默认参数、元组参数和字典参数例解</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-node-share.htm" title="免费V2Ray | 3月28日19.7M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享">免费V2Ray | 3月28日19.7M/S|免费V2ray/Clash/SSR/Shadowrocket免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-77302.htm" title="Zookeeper 基本概念">Zookeeper 基本概念</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-20-free-high-speed-nodes.htm" title="免费V2Ray | 3月20日20.6M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享">免费V2Ray | 3月20日20.6M/S|免费Clash/Shadowrocket/SSR/V2ray免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-80046.htm" title="在react中使用event(事件对象)，如何使用，注意事项和react中如何定义和使用函数？">在react中使用event(事件对象)，如何使用，注意事项和react中如何定义和使用函数？</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-free-node-subscribe.htm" title="免费V2Ray | 4月13日19.9M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享">免费V2Ray | 4月13日19.9M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Alt Services Section -->
+    </main>
+        <footer id="footer" class="footer dark-background">
+        <div class="container copyright text-center mt-4">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">免费V2Ray 订阅机场节点官网</a> 版权所有 Powered by WordPress
+            </p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information:  -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/v2raylinux/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/jquery-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/purecounter_vanilla.js"></script>
+    <!-- Main JS File -->
+    <script src="/assets/website/js/frontend/v2raylinux/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

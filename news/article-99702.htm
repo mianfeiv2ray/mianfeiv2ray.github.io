@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://mianfeiv2ray.github.io/news/article-99702.htm" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>python函数参数的默认参数、元组参数和字典参数例解</title>
+        <meta name="description" content="python函数除了不带参数，带固定参数之外，还有另外三类函数参数有重要使用价值，是提升python水平需要强化的内容。它们是默认参数、元组参数和字典参数。下面举例子说明。 1.默认参数 即在函数定义" />
+        <link rel="icon" href="/assets/website/img/v2raylinux/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费V2Ray 订阅机场节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mianfeiv2ray.github.io/news/article-99702.htm" />
+    <meta property="og:site_name" content="免费V2Ray 订阅机场节点官网" />
+    <meta property="og:title" content="python函数参数的默认参数、元组参数和字典参数例解" />
+    <meta property="og:image" content="https://mianfeiv2ray.github.io/uploads/20241109-1/e4936f5786c9bae850059f3db03b1b36.webp" />
+        <meta property="og:release_date" content="2025-04-19T08:59:19" />
+    <meta property="og:updated_time" content="2025-04-19T08:59:19" />
+        <meta property="og:description" content="python函数除了不带参数，带固定参数之外，还有另外三类函数参数有重要使用价值，是提升python水平需要强化的内容。它们是默认参数、元组参数和字典参数。下面举例子说明。 1.默认参数 即在函数定义" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="python函数参数的默认参数、元组参数和字典参数例解">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="">
+    <link href="/assets/website/css/v2raylinux/css2-Robotoitalwght010003000400050007000900110013001400150017001900_OpenSansitalwght030004000500060007000800130014001500160017001800_Poppinsitalwght010002000300040005000600070008000900110012001300140015001600170018001900_swap.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="/assets/website/css/v2raylinux/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/aos.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/all.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/website/css/v2raylinux/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="/assets/website/css/v2raylinux/main.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT7S29254M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT7S29254M');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="about-page" data-page="detail">
+        <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="/" class="logo d-flex align-items-center">
+                                <span class="sitename">免费V2Ray</span>
+                            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                                        <li><a href="/">首页</a></li>
+                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                        <li><a href="/news/">新闻资讯</a></li>
+                                        <li><a href="/client.htm">客户端</a></li>
+                                    </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Page Title -->
+        <div class="page-title dark-background" style="background-image: url(/assets/website/img/v2raylinux/page-title-bg.jpg);">
+            <div class="container position-relative">
+                <h1>python函数参数的默认参数、元组参数和字典参数例解</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="新闻资讯">新闻资讯</a></li>
+                        <li class="current">正文</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Alt Services Section -->
+        <section id="alt-services" class="alt-services section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>python函数除了不带参数，带固定参数之外，还有另外三类函数参数有重要使用价值，是提升python水平需要强化的内容。它们是默认参数、元组参数和字典参数。下面举例子说明。</p> <p>1.默认参数</p> <p>即在函数定义时赋值的参数。</p> <pre class="has"><code class="hljs language-python">#默认参数主要是为了减少重复输入的次数。 def func_default(x,y=100,z="good"):     print(x,y,z)  func_default(78) func_default(78,99) func_default(78,99,"电影") func_default(x=120,z="电视剧") func_default(z="喜剧",x=500)#参数可以调换位置。 </code></pre> <p>输出是：</p> <p><img fetchpriority="high" decoding="async" alt="" class="has" height="203" src="http://img.555519.xyz/uploads/20221228/aa48c732e0d54dc99dc474a778898e85.jpg"></p> <p>2.以元组为参数</p> <p>以元组为参数时在参数名前加一个“*”号以示区别。</p> <pre class="has"><code class="hljs language-python">#以元组作为参数 def func_tuple(name,*args):     print(name + " 有以下雅称:")     for i in args:         print(i)  func_tuple("孙悟空","monkey","maomao","xueba")</code></pre> <p>输出是：</p> <p><img decoding="async" alt="" class="has" height="75" src="http://img.555519.xyz/uploads/20221228/a0f69dbf6eef4d3b0e1b2ea43417a193.jpg"></p> <p>3.以字典作为参数</p> <p>参数名前加“**”以示区别。</p> <pre class="has"><code class="hljs language-python">#以字典（键值对）作为参数 def func_dict(**kwargs):     print("参数的格式为：",type(kwargs))     for i in kwargs:#输出值         print(kwargs[i])     for i in kwargs:#输出键         print(i)     for i in kwargs:#输出键值         print(i,kwargs[i])     for i in kwargs:#输出所有键值i次         print(kwargs) func_dict(aa=1,bb=2,cc=3)#注意赋值方式</code></pre> <p>输出是：</p> <p><img decoding="async" alt="" class="has" height="247" src="http://img.555519.xyz/uploads/20221228/81b09ae9ede38333bbdd4b20f9de0ba9.jpg"></p> <p>4.一个综合的例子</p> <pre class="has"><code class="hljs language-python">#综合例子 # 带一个*的是元组，带两个星号的是字典。 def total(a=5,*numbers,**phonebook):     print('a',a)     for single_item in numbers:         print('single_item',single_item)     for first_part,second_part in phonebook.items():         print(first_part,second_part) total(10,1,2,3,Jack=1123,John=2231,Inge=1560)</code></pre> <p>输出是：</p> <p><img loading="lazy" decoding="async" alt="" class="has" height="138" src="http://img.555519.xyz/uploads/20221228/080bc1efeeeee5418bdbe1f9b4b180e5.jpg"></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-98913.htm">吉娃娃转让100元左右（吉娃娃市场价格多少钱一只）</a></p>
+                                        <p>下一个：<a href="/news/article-99703.htm">Jackson忽略字段不序列化字段的3种方法</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-67384.htm" title="实时流处理与分布式存储过程中对文件的操作">实时流处理与分布式存储过程中对文件的操作</a></li>
+                        <li class="py-2"><a href="/news/article-66116.htm" title="动物医院名字有创意两个字的叫什么（动物医院名字有创意两个字的叫什么来着）">动物医院名字有创意两个字的叫什么（动物医院名字有创意两个字的叫什么来着）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-subscribe-node.htm" title="免费V2Ray | 3月31日21.7M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享">免费V2Ray | 3月31日21.7M/S|免费Shadowrocket/Clash/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-78668.htm" title="戴尔bios设置固态启动（dell固态bios设置）">戴尔bios设置固态启动（dell固态bios设置）</a></li>
+                        <li class="py-2"><a href="/news/article-84271.htm" title="动物疫苗注射方法及部位图片 动物疫苗注射方法及部位图片大全">动物疫苗注射方法及部位图片 动物疫苗注射方法及部位图片大全</a></li>
+                        <li class="py-2"><a href="/news/article-83551.htm" title="兰州宠物交易市场在哪儿呀（兰州宠物市场在哪里）">兰州宠物交易市场在哪儿呀（兰州宠物市场在哪里）</a></li>
+                        <li class="py-2"><a href="/news/article-90062.htm" title="中国十大宠物食品公司全名叫什么（国内宠物食品行业公司）">中国十大宠物食品公司全名叫什么（国内宠物食品行业公司）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-7-node-share-links.htm" title="免费V2Ray | 4月7日20.6M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享">免费V2Ray | 4月7日20.6M/S|免费Clash/Shadowrocket/V2ray/SSR免费节点订阅分享</a></li>
+                        <li class="py-2"><a href="/news/article-69953.htm" title="动物疫苗种类及类型分类表（动物疫苗接种技术）">动物疫苗种类及类型分类表（动物疫苗接种技术）</a></li>
+                        <li class="py-2"><a href="/news/article-74581.htm" title="阿城区王允海动物医院电话是多少啊（王允海宠物医院怎么样）">阿城区王允海动物医院电话是多少啊（王允海宠物医院怎么样）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Alt Services Section -->
+    </main>
+        <footer id="footer" class="footer dark-background">
+        <div class="container copyright text-center mt-4">
+                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+            <p>
+                <a href="/">免费V2Ray 订阅机场节点官网</a> 版权所有 Powered by WordPress
+            </p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information:  -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script data-cfasync="false" src="/assets/website/js/frontend/v2raylinux/email-decode.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/jquery-3.6.0.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/bootstrap.bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/validate.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/aos.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/glightbox.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/imagesloaded.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/isotope.pkgd.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/swiper-bundle.min.js"></script>
+    <script src="/assets/website/js/frontend/v2raylinux/purecounter_vanilla.js"></script>
+    <!-- Main JS File -->
+    <script src="/assets/website/js/frontend/v2raylinux/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
