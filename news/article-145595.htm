@@ -68,7 +68,7 @@
         <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
             <a href="/" class="logo d-flex align-items-center">
-                                <span class="sitename">免费V2ray</span>
+                                <span class="sitename">免费V2ray节点分享</span>
                             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
@@ -101,7 +101,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node免费节点站" data-url="https://clashnode.github.io">
                 <div class="xcblog-blog-detail xcblog-blog-detail-defined">
                       <h2>引言</h2>  <p>在当今高度互联的世界里，网络自由已成为许多人不可或缺的需求。无论是访问国际学术资源、观看海外流媒体，还是与全球伙伴保持联系，突破地域限制的能力显得尤为重要。Surfboard作为一款高效稳定的代理工具，凭借其出色的性能和易用性，成为众多用户的首选。本文将为您详细介绍如何获取、安装和配置Surfboard最新版本，并解答常见问题，助您畅享无界网络体验。  </p>  <h2>为什么选择Surfboard？</h2>  <p>Surfboard之所以备受青睐，源于其三大核心优势：  </p>  <ol> <li><strong>极速稳定</strong>：采用智能路由算法，自动选择最优节点，确保连接稳定流畅。  </li> <li><strong>隐私保护</strong>：通过军事级加密技术，保障数据传输安全，防止信息泄露。  </li> <li><strong>跨平台支持</strong>：全面兼容Windows、macOS和Linux系统，满足不同用户需求。  </li> </ol>  <p>最新版本更在以下方面做出改进：<br /> - 优化了连接协议，速度提升高达30%<br /> - 新增流量统计功能，实时监控数据使用情况<br /> - 修复了已知的15个系统兼容性问题  </p>  <h2>详细安装指南</h2>  <h3>第一步：获取官方安装包</h3>  <p><strong>重要提示</strong>：务必通过<a href="https://www.getsurfboard.com">Surfboard官网</a>下载安装包，避免第三方渠道可能带来的安全风险。  </p>  <ol> <li>打开浏览器访问官网  </li> <li>点击"Downloads"进入下载页面  </li> <li>根据您的操作系统选择对应版本：    <ul> <li>Windows用户：选择.exe格式安装包（支持Win10及以上）  </li> <li>Mac用户：下载.dmg镜像文件（兼容macOS 10.15+）  </li> <li>Linux用户：获取.deb或.rpm包（适配主流发行版）  </li> </ul></li> </ol>  <p><em>专业建议</em>：下载前建议校验文件SHA-256值，确保安装包完整性。  </p>  <h3>第二步：安装过程详解</h3>  <h4>Windows系统安装</h4>  <ol> <li>双击下载的.exe文件  </li> <li>在用户账户控制提示中选择"是"  </li> <li>按照向导完成以下步骤：    <ul> <li>选择安装语言（推荐英文或简体中文）  </li> <li>阅读并同意许可协议  </li> <li>指定安装路径（默认C:\Program Files\Surfboard）  </li> <li>勾选创建桌面快捷方式  </li> </ul></li> <li>点击"安装"按钮，等待进度条完成  </li> <li>取消勾选"立即运行"选项（建议先完成配置再启动）  </li> </ol>  <h4>macOS系统安装</h4>  <ol> <li>打开下载的.dmg磁盘映像  </li> <li>将Surfboard图标拖拽至Applications文件夹  </li> <li>在启动台中找到并打开应用  </li> <li>首次运行时需在系统偏好设置中授予网络权限  </li> </ol>  <p><em>常见问题</em>：若出现"无法验证开发者"提示，需前往"安全性与隐私"手动允许运行。  </p>  <h3>第三步：初始配置</h3>  <p>成功安装后，首次启动将进入配置向导：  </p>  <ol> <li><p><strong>服务器设置</strong>  </p>  <ul> <li>手动输入：如果您有自己的服务器，填写地址、端口、加密方式等信息  </li> <li>订阅链接：支持一键导入标准格式的订阅URL  </li> </ul></li> <li><p><strong>代理模式选择</strong>  </p>  <ul> <li>全局模式：所有流量都通过代理  </li> <li>智能分流：自动识别国内外网站（推荐日常使用）  </li> <li>自定义规则：高级用户可编写自己的路由规则  </li> </ul></li> <li><p><strong>高级选项</strong>  </p>  <ul> <li>设置本地监听端口（默认1080）  </li> <li>开启UDP转发（适合游戏和视频通话）  </li> <li>配置DNS防污染（建议使用Cloudflare或Google DNS）  </li> </ul></li> </ol>  <p><em>配置示例</em>：<br /> <code>json {   "server": "your.server.com",   "server_port": 443,   "password": "your_password",   "method": "aes-256-gcm",   "timeout": 300 }</code></p>  <h2>使用技巧与优化</h2>  <h3>性能调优</h3>  <ol> <li><strong>节点测速</strong>：定期使用内置的延迟测试功能，自动切换至最佳节点  </li> <li><strong>协议选择</strong>：    <ul> <li>网络环境好时：优先使用WireGuard协议  </li> <li>限制严格地区：建议切换至Vmess+WS+TLS组合  </li> </ul></li> <li><strong>流量压缩</strong>：启用数据压缩可节省20%-50%流量  </li> </ol>  <h3>移动端联动</h3>  <p>通过扫描二维码即可将配置同步到手机：<br /> 1. 在桌面端生成配置二维码<br /> 2. 打开手机版Surfboard的扫码功能<br /> 3. 自动完成所有设置同步  </p>  <h2>常见问题解决方案</h2>  <h3>连接类问题</h3>  <p><strong>症状</strong>：显示已连接但无法访问网站<br /> - 检查系统时间是否准确（误差超过3分钟会导致TLS失败）<br /> - 尝试切换TCP/QUIC传输协议<br /> - 关闭IPv6支持（某些ISP存在兼容性问题）  </p>  <p><strong>错误代码</strong>：ERR<em>PROXY</em>CONNECTION_FAILED<br /> 1. 确认本地防火墙未阻止Surfboard<br /> 2. 重置IE代理设置（即使不使用IE也可能影响）<br /> 3. 更换备用端口（如443/80/8888）  </p>  <h3>更新维护</h3>  <p>建议开启自动更新功能：<br /> 1. 进入设置 > 常规<br /> 2. 勾选"自动下载更新"<br /> 3. 设置更新检查频率（推荐每周）  </p>  <p><em>注意</em>：重大版本更新可能需要重新配置，建议更新前导出配置文件备份。  </p>  <h2>安全使用建议</h2>  <ol> <li><strong>定期更换密码</strong>：至少每3个月更新一次服务器认证信息  </li> <li><strong>流量混淆</strong>：在审查严格地区启用Obfs插件  </li> <li><strong>DNS泄漏防护</strong>：始终开启"DNS over Proxy"功能  </li> <li><strong>日志管理</strong>：设置自动清除日志周期（建议7天）  </li> </ol>  <h2>结语</h2>  <p>通过本文的详细指导，您应该已经掌握了Surfboard从安装到配置的全流程。这款工具的强大之处不仅在于其技术实现，更在于它为用户提供的网络自由。随着5G时代的到来，我们对无边界互联的需求只会日益增长，而掌握这类工具的使用技能，将成为数字公民的基本素养。  </p>  <p>最后提醒：请始终遵守当地法律法规，将技术用于正当用途。Surfboard作为中立的工具，其价值取决于使用者的目的和方式。愿您能在合法合规的前提下，尽情探索互联网的无限可能。  </p>  <p><strong>进阶资源</strong>：<br /> - Surfboard官方文档库<br /> - GitHub开源社区讨论区<br /> - 网络自由基金会技术指南  </p>  <p>如果您在实践过程中遇到特殊问题，欢迎在评论区留言，我们将挑选典型问题进行专业解答。也请分享您的使用心得，帮助更多朋友解锁网络新体验！</p>                 </div>
                 <div class="clearfix"></div>
@@ -117,16 +117,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-145915.htm" title="极速畅游网络世界：Quantumult X全方位加速优化指南">极速畅游网络世界：Quantumult X全方位加速优化指南</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-7-6-free-vpn-node.htm" title="Win VPN | 7月6日19.7M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享">Win VPN | 7月6日19.7M/S|免费SSR/Shadowrocket/V2ray/Clash免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/news/article-148201.htm" title="全面解析vmess在百度吧的使用与配置：解锁网络自由之门">全面解析vmess在百度吧的使用与配置：解锁网络自由之门</a></li>
-                        <li class="py-2"><a href="/news/article-137433.htm" title="全面掌握 Clash Windows 0.9.4：从入门到精通的终极配置手册">全面掌握 Clash Windows 0.9.4：从入门到精通的终极配置手册</a></li>
-                        <li class="py-2"><a href="/news/article-143416.htm" title="突破网络边界：SS V2Ray订阅服务器全方位配置与应用指南">突破网络边界：SS V2Ray订阅服务器全方位配置与应用指南</a></li>
+                        <li class="py-2"><a href="/news/article-142326.htm" title="解锁网络自由：手把手教你用AWS免费套餐搭建专属VPN">解锁网络自由：手把手教你用AWS免费套餐搭建专属VPN</a></li>
                         <li class="py-2"><a href="/news/article-141973.htm" title="突破边界：科学上网工具的深度解析与实用指南">突破边界：科学上网工具的深度解析与实用指南</a></li>
+                        <li class="py-2"><a href="/news/article-142686.htm" title="手机通过hosts文件突破网络限制：从原理到实践的完整指南">手机通过hosts文件突破网络限制：从原理到实践的完整指南</a></li>
                         <li class="py-2"><a href="/news/article-141608.htm" title="自由与边界的探索：OpenWrt路由器上部署V2Ray全攻略与合规使用指南">自由与边界的探索：OpenWrt路由器上部署V2Ray全攻略与合规使用指南</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-8-28-clash-node-github.htm" title="免费V2ray - 8月28日20.2M/S|免费SSR/Shadowrocket/V2ray/Clash节点推荐，V2rayC梯子购买推荐">免费V2ray - 8月28日20.2M/S|免费SSR/Shadowrocket/V2ray/Clash节点推荐，V2rayC梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-7-7-vpn-proxy.htm" title="Win VPN | 7月7日20M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享">Win VPN | 7月7日20M/S|免费Clash/V2ray/Shadowrocket/SSR免费节点订阅分享</a></li>
-                        <li class="py-2"><a href="/news/article-140615.htm" title="解锁全球网络自由：Shadowrocket美国节点完全配置与优化指南">解锁全球网络自由：Shadowrocket美国节点完全配置与优化指南</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-7-clash-stash.htm" title="免费V2ray - 9月7日23M/S|免费V2ray节点/Clash节点/SSR/Shadowrocket节点推荐，V2rayC梯子购买推荐">免费V2ray - 9月7日23M/S|免费V2ray节点/Clash节点/SSR/Shadowrocket节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/news/article-143052.htm" title="手机端Opera浏览器科学上网全攻略：解锁网络自由的智能之选">手机端Opera浏览器科学上网全攻略：解锁网络自由的智能之选</a></li>
+                        <li class="py-2"><a href="/news/article-146692.htm" title="解锁全球网络自由：Surge 科学上网全攻略与深度体验报告">解锁全球网络自由：Surge 科学上网全攻略与深度体验报告</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-13-free-v2ray.htm" title="免费V2ray - 9月13日18M/S|免费V2ray节点/SSR/Clash节点/Shadowrocket节点推荐，V2rayC梯子购买推荐">免费V2ray - 9月13日18M/S|免费V2ray节点/SSR/Clash节点/Shadowrocket节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-10-node-share.htm" title="免费V2ray - 9月10日21.3M/S|免费V2ray节点/Shadowrocket节点/SSR/Clash节点推荐，V2rayC梯子购买推荐">免费V2ray - 9月10日21.3M/S|免费V2ray节点/Shadowrocket节点/SSR/Clash节点推荐，V2rayC梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-22-free-clash-subscribe.htm" title="免费V2ray - 9月22日21.9M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点推荐，V2rayC梯子购买推荐">免费V2ray - 9月22日21.9M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点推荐，V2rayC梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -138,10 +138,10 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-07/" title="2025-07 归档">2025-07</a></h4>
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
             </li>
                     </ul>
     </div>
@@ -154,7 +154,8 @@
     </main>
         <footer id="footer" class="footer dark-background">
         <div class="container copyright text-center mt-4">
-                                <p>
+                                <p>本站内容仅供学习与技术研究用途，无意传播或倡导任何违反法律法规的行为。在此声明：用户须自行了解所在地法律法规，合法合规使用；因使用不当产生的法律责任，与本站及作者无关；请在使用前仔细阅读本声明，继续使用即视为同意以上条款。</p>
+                    <p>
                                                 <a href="/">首页</a> |
                                                 <a href="/free-nodes/">免费节点</a> |
                                                 <a href="/paid-subscribe/">推荐机场</a> |
@@ -165,7 +166,7 @@
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-            <p>
+                                <p>
                 <a href="/">免费V2Ray 订阅机场节点官网</a> 版权所有 Powered by WordPress
             </p>
             <div class="credits">
