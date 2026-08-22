@@ -1,4 +1,4 @@
-# 免费V2ray - 8月15日19.2M/S|免费Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/SSR节点节点推荐，V2rayC梯子购买推荐  更新时间 2026-08-15 08:53:03
+# 免费V2ray - 8月22日21.2M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点节点推荐，V2rayC梯子购买推荐  更新时间 2026-08-22 09:28:50
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://mianfeiv2ray.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://mianfeiv2ray.github.io/uploads/2026/08/0-20260815.yaml
-- https://mianfeiv2ray.github.io/uploads/2026/08/1-20260815.yaml
-- https://mianfeiv2ray.github.io/uploads/2026/08/2-20260815.yaml
-- https://mianfeiv2ray.github.io/uploads/2026/08/3-20260815.yaml
-- https://mianfeiv2ray.github.io/uploads/2026/08/4-20260815.yaml
+- https://mianfeiv2ray.github.io/uploads/2026/08/0-20260822.yaml
+- https://mianfeiv2ray.github.io/uploads/2026/08/1-20260822.yaml
+- https://mianfeiv2ray.github.io/uploads/2026/08/2-20260822.yaml
+- https://mianfeiv2ray.github.io/uploads/2026/08/3-20260822.yaml
+- https://mianfeiv2ray.github.io/uploads/2026/08/4-20260822.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://mianfeiv2ray.github.io/uploads/2026/08/0-20260815.txt
-- https://mianfeiv2ray.github.io/uploads/2026/08/1-20260815.txt
-- https://mianfeiv2ray.github.io/uploads/2026/08/2-20260815.txt
-- https://mianfeiv2ray.github.io/uploads/2026/08/3-20260815.txt
-- https://mianfeiv2ray.github.io/uploads/2026/08/4-20260815.txt
+- https://mianfeiv2ray.github.io/uploads/2026/08/0-20260822.txt
+- https://mianfeiv2ray.github.io/uploads/2026/08/1-20260822.txt
+- https://mianfeiv2ray.github.io/uploads/2026/08/2-20260822.txt
+- https://mianfeiv2ray.github.io/uploads/2026/08/3-20260822.txt
+- https://mianfeiv2ray.github.io/uploads/2026/08/4-20260822.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://mianfeiv2ray.github.io/uploads/2026/08/20260815.json
+- https://mianfeiv2ray.github.io/uploads/2026/08/20260822.json
 
 ## 更多Clash节点订阅 ：
 
